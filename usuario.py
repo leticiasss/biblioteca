@@ -35,6 +35,21 @@ class Usuario:
         cls.usuarios_cadastrados.append(novo_usuario)
         print("Usuário cadastrado com sucesso!")
 
+    def cadastrar_livro():
+        print("\n--- Cadastro de Livro ---")
+        titulo = input("Título: ")
+        autor = input("Autor: ")
+        genero = input("Gênero: ")
+        ano = input("Ano de publicação: ")
+        try:
+            qntd = int(input("Quantidade disponível: "))
+        except ValueError:
+            print("Quantidade inválida. Cadastro cancelado.")
+            return
+
+        novo_livro = Livro(titulo, autor, genero, ano, qntd)
+        novo_livro.cadastrar_livro()
+
     def buscar_livro_por_nome(self, nome_livro):
         """
         Busca livros pelo nome.

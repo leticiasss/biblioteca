@@ -14,8 +14,9 @@ def menu():
         print("2. Fazer empréstimo")
         print("3. Devolver livro")
         print("4. Cadastrar usuário")
-        print("5. Relatórios")
-        print("6. Sair")
+        print("5. Cadastrar Livro")
+        print("6. Relatórios")
+        print("7. Sair")
 
         opcao = input("Escolha uma opção: ")
 
@@ -32,8 +33,10 @@ def menu():
             case "4":
                 Usuario.cadastrar_usuario()
             case "5":
-                submenu_relatorios()
+                Usuario.cadastrar_livro()
             case "6":
+                submenu_relatorios()
+            case "7":
                 print("Saindo do sistema. Até logo!")
                 break
             case _:
